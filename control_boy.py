@@ -30,11 +30,13 @@ def reset_world():
     running = True
 
     grass = Grass()
-    game_world.add_object(grass)
+    game_world.add_object(grass,0)
 
     boy = Boy()
-    game_world.add_object(boy)
+    game_world.add_object(boy,1)
 
+    grass = Grass()
+    game_world.add_object(grass, 2)
 
 def update_world():
     game_world.update()
@@ -51,7 +53,7 @@ reset_world()
 # game loop
 while running:
     handle_events()
-    update_world()
+    update_world( )
     render_world()
     delay(0.01)
 # finalization code

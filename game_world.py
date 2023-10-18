@@ -1,20 +1,25 @@
-objects = [[],[]]
+objects = [[],[],[]]
 
 
 def add_object(o, depth=0):
     objects[depth].append(o)
 
 
+def add_objects(ol, depth = 0):
+    objects[depth] += ol
+
+
 def update():
     for layer in objects:
-        for o in objects:
+        for o in layer:
             o.update()
 
 
 def render():
     for layer in objects:
-        for o in objects:
+        for o in layer:
             o.draw()
+
 
 
 def remove_object(o):

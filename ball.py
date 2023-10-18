@@ -7,6 +7,7 @@ class Ball:
     image = None
 
     def __init__(self, x = 400, y = 300, velocity = 1):
+        self.face_dir = None
         if Ball.image == None:
             Ball.image = load_image('ball21x21.png')
         self.x, self.y, self.velocity = x, y, velocity
@@ -17,5 +18,5 @@ class Ball:
     def update(self):
         self.x += self.velocity
 
-        if self.x < 50 or self.x>800-50:
-            game_world.remove_object(self)
+
+
