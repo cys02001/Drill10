@@ -25,17 +25,14 @@ def reset_world():
     global running
     global grass
     global team
-    global world
     global boy
 
     running = True
-    world = []
 
     grass = Grass()
     game_world.add_object(grass)
 
     boy = Boy()
-    world.append(boy)
     game_world.add_object(boy)
 
 
